@@ -1408,6 +1408,18 @@
     <!-- 
     - #BACK TO TOP
   -->
+    <script>
+    var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
+    var voiceRecognition = new SpeechRecognition();
+    voiceRecognition.lang = 'en-US';
+    
+    voiceRecognition.interimResults = false;
+    voiceRecognition.maxAlternatives = 5;
+    voiceRecognition.start();
+    
+    voiceRecognition.onresult = function(event) {
+        console.log('You said:', event.results[0][0].transcript);
+    }; </script>
 
     <a
       href="#top"
