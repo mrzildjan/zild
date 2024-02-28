@@ -1389,7 +1389,6 @@
               aria-label="Message"
               class="input-field"
             ></textarea>
-
             <button type="submit" class="btn">Book a Table</button>
           </form>
         </div>
@@ -1408,18 +1407,7 @@
     <!-- 
     - #BACK TO TOP
   -->
-    <script>
-    var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
-    var voiceRecognition = new SpeechRecognition();
-    voiceRecognition.lang = 'en-US';
-    
-    voiceRecognition.interimResults = false;
-    voiceRecognition.maxAlternatives = 5;
-    voiceRecognition.start();
-    
-    voiceRecognition.onresult = function(event) {
-        console.log('You said:', event.results[0][0].transcript);
-    }; </script>
+    <script src="script.js"></script>
 
     <a
       href="#top"
